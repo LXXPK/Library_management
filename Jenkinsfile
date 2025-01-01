@@ -31,7 +31,7 @@ pipeline {
                 php -r "if (!extension_loaded('mysqli')) exit(1);"
                 if %ERRORLEVEL% neq 0 (
                     echo Enabling mysqli extension...
-                    for %%F in ("C:\php\php.ini") do (
+                    for %%F in ("C:\\php\\php.ini") do (
                         findstr /C:"extension=mysqli" "%%F" > nul || (
                             echo extension=mysqli >> "%%F"
                         )
